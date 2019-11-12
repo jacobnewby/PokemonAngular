@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { PokemonService} from 'src/app/services/pokemon.service';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -29,9 +30,7 @@ export class HomeComponent implements OnInit {
   
   onSubmit() {
     this.pokemonService.getPokemon(this.searchForm.value.Name).subscribe(() => {
-      this.router.navigate(['/detail/:name'])
+      this.router.navigate([`/detail/${this.searchForm.value.Name}`])
     })
-    console.log(this.searchForm);
   }
-
 }

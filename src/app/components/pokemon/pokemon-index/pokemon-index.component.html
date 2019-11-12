@@ -1,6 +1,7 @@
 <h2>All Pokemon</h2>
 <hr />
 <ul *ngFor="let item of Pokemon.results; let i = index;">
+    <a routerLink="/detail/{{i+1}}">
     <li>{{item.name}} </li>
-    <a routerLink="/detail/{{i+1}}">details!</a>
+    </a>
 </ul>
