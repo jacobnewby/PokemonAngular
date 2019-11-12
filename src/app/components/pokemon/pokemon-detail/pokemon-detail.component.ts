@@ -11,13 +11,13 @@ import {ActivatedRoute } from '@angular/router'
 })
 export class PokemonDetailComponent implements OnInit {
   Pokemon;
-  columnName = ['name', 'sprites', 'type', 'move1', 'move2', 'move3', 'move4'];
+  columnName = ['name', 'sprites', 'types', 'moves'];
   dataSource: MatTableDataSource<Pokemon>;
   constructor(private pokemonService: PokemonService, private _activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this._activatedRoute.paramMap.subscribe(routerData => {
-      this.pokemonService.getPokemon(routerData.get('name')).subscribe((pokemon: Pokemon[])=>{
+      this.pokemonService.getPokemon(routerData.get('id')).subscribe((pokemon: Pokemon[])=>{
       this.dataSource = new MatTableDataSource<Pokemon>(pokemon);
       console.log(pokemon);
       this.Pokemon=pokemon;
