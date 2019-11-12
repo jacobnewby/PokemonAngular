@@ -1,1 +1,31 @@
-<p>Pokemon Detail Page</p>
+<h2>Pokemon Details</h2>
+<hr />
+
+<div *ngIf="Pokemon">
+    <div>
+      <label>Name: </label>
+      <span>{{Pokemon.name}}</span>
+    </div>
+    <div>
+      <img [src]="Pokemon.sprites.front_default">
+    </div>
+    <div>
+        <label>Type: </label>
+        <br>
+        <span>{{Pokemon.types[0].type.name}}</span>
+        <br>
+        <span *ngIf="Pokemon.types[1]">{{Pokemon.types[1].type.name}}</span>
+      </div>
+      <div>
+        <label>Moves: </label>
+        <br>
+        <span>{{Pokemon.moves[0].move.name}}</span>
+        <br>
+        <span *ngIf="Pokemon.moves[1]">{{Pokemon.moves[1].move.name}}</span>
+        <br>
+        <span *ngIf="Pokemon.moves[2]">{{Pokemon.moves[2].move.name}}</span>
+        <br>
+        <span *ngIf="Pokemon.moves[3]">{{Pokemon.moves[3].move.name}}</span>
+      </div>
+</div>
+<button mat-button color="primary" routerLink="/pokemon">Back to List</button>

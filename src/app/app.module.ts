@@ -22,7 +22,7 @@ import { PokemonService } from './services/pokemon.service';
 
 const routes = [
   { path: 'pokemon', component: PokemonIndexComponent },
-  { path: 'detail/:name', component: PokemonDetailComponent }
+  { path: 'detail/:id', component: PokemonDetailComponent }
 
 ];
 

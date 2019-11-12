@@ -27,7 +27,7 @@ export class AppComponent {
     this.pokemonService.getPokemon(this.searchForm.value).subscribe(() => {
       this.router.navigate(['/pokemon'])
     })
-    console.log(this.searchForm);
+    // console.log(this.searchForm);
   }
 }
 
