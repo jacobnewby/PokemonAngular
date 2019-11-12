@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { Pokemon } from 'src/app/components/pokemon/pokemon';
 import {  MatTableDataSource } from '@angular/material';
-import {ActivatedRoute } from '@angular/router'
+import {ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon-detail',
