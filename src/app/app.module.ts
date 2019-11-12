@@ -21,7 +21,9 @@ import { HeaderComponent } from './components/header/header/header.component';
 import { PokemonService } from './services/pokemon.service';
 
 const routes = [
-  { path: 'pokemon', component: PokemonIndexComponent }
+  { path: 'pokemon', component: PokemonIndexComponent },
+  { path: 'detail/:name', component: PokemonDetailComponent }
+
 ];
 
 @NgModule({
