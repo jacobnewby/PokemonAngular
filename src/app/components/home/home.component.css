@@ -3,4 +3,12 @@ form {
     justify-content: center;
     align-items: center;
     margin: auto auto;
+    width: 35vw;
+}
+
+mat-form-field {
+    width: 35vw;
+    padding-right: 1em;
+    padding-bottom: 10px;
+    text-align: center;
 }
