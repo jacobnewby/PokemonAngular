@@ -1,5 +1,9 @@
 <h2>All Pokemon</h2>
 <hr />
-<div class="deck" *ngFor="let item of Pokemon.results; let i = index;">
-    <button routerLink="/detail/{{i+1}}" mat-button class="poke-btn">{{item.name}}</button>
+<div class="pokedex">
+
+    <div class="deck" *ngFor="let item of Pokemon.results; let i = index;">
+        <button routerLink="/detail/{{i+1}}" mat-button class="poke-btn">{{item.name}}</button>
+    </div>
+    
 </div>
