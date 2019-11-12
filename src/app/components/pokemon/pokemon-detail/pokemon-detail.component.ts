@@ -11,7 +11,7 @@ import {ActivatedRoute } from '@angular/router'
 })
 export class PokemonDetailComponent implements OnInit {
   Pokemon;
-  columnName = ['name', 'sprites', 'types', 'move1', 'move2', 'move3', 'move4'];
+  columnName = ['name', 'sprites', 'types', 'moves'];
   dataSource: MatTableDataSource<Pokemon>;
   constructor(private pokemonService: PokemonService, private _activatedRoute: ActivatedRoute) { }
 
