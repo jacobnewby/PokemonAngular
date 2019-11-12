@@ -11,24 +11,23 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'PokemonAngular';
 
-  searchForm: FormGroup;
+  // searchForm: FormGroup;
 
-  constructor(private form: FormBuilder, private pokemonService: PokemonService, private router: Router) {
-    this.searchPokemon();
-  }
+  // constructor(private form: FormBuilder, private pokemonService: PokemonService, private router: Router) {
+  //   this.searchPokemon();
+  // }
 
-  searchPokemon() {
-    this.searchForm = this.form.group({
-     Name: new FormControl 
-    });
-  }
+  // searchPokemon() {
+  //   this.searchForm = this.form.group({
+  //    Name: new FormControl 
+  //   });
+  // }
   
-  onSubmit() {
-    this.pokemonService.getPokemon(this.searchForm.value).subscribe(() => {
-      this.router.navigate(['/pokemon'])
-    })
-    console.log(this.searchForm);
-  }
+  // onSubmit() {
+  //   this.pokemonService.getPokemon(this.searchForm.value).subscribe(() => {
+  //     this.router.navigate(['/pokemon'])
+  //   })
+  // }
 }
 
 
