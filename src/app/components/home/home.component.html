@@ -1,6 +1,8 @@
 
 <body>
     <!-- put search input using form with type search from angular -->
+    <img class="homeImage" src="https://www.freepnglogos.com/uploads/pokemon-logo-text-png-7.png" alt="background-image">
+
     <form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
         <div>
             <mat-form-field>
@@ -10,3 +12,18 @@
     </form>
 </body>
 
+<style>
+    .homeImage{
+        height:300px;
+        width:1000px;
+        margin-left: 15em;
+    }
+    body{
+        height: 800px;
+        width: auto;
+        background-image: url(http://getwallpapers.com/wallpaper/full/f/2/4/53829.jpg);
+    }
+    .background-image{
+        opacity: 0.2;
+    }
+</style>
