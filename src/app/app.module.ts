@@ -19,10 +19,11 @@ import { PokemonIndexComponent } from './components/pokemon/pokemon-index/pokemo
 import { PokemonDetailComponent } from './components/pokemon/pokemon-detail/pokemon-detail.component';
 import { HeaderComponent } from './components/header/header/header.component';
 import { PokemonService } from './services/pokemon.service';
+import { HomeComponent } from './components/home/home.component';
 
 const routes = [
   { path: 'pokemon', component: PokemonIndexComponent },
-  { path: 'detail/:name', component: PokemonDetailComponent }
+  { path: 'detail/:id', component: PokemonDetailComponent }
 
 ];
 
@@ -31,7 +32,8 @@ const routes = [
     AppComponent,
     PokemonIndexComponent,
     PokemonDetailComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

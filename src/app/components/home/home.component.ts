@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonService } from 'src/app/services/pokemon.service';
-import { Pokemon } from 'src/app/components/pokemon/pokemon';
-import { MatTableDataSource } from '@angular/material';
-import {ActivatedRoute } from '@angular/router'
+import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { PokemonService} from 'src/app/services/pokemon.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,18 +9,29 @@ import {ActivatedRoute } from '@angular/router'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class PokemonIndexComponent implements OnInit {
-  Pokemon;
-  columnName = ['name', 'sprites', 'type', 'move1', 'move2', 'move3', 'move4'];
-  dataSource: MatTableDataSource<Pokemon>;
-  constructor(private pokemonService: PokemonService) { }
+export class HomeComponent implements OnInit {
+  title = 'PokemonAngular';
+
+  searchForm: FormGroup;
+
+  constructor(private form: FormBuilder, private pokemonService: PokemonService, private router: Router) {
+    this.searchPokemon();
+  }
 
   ngOnInit() {
-    this.pokemonService.getAll().subscribe((pokemon: Pokemon[])=>{
-      this.dataSource = new MatTableDataSource<Pokemon>(pokemon);
-      console.log(pokemon);
-      this.Pokemon=pokemon;
+  }
+
+  searchPokemon() {
+    this.searchForm = this.form.group({
+     Name: new FormControl 
     });
+  }
+  
+  onSubmit() {
+    this.pokemonService.getPokemon(this.searchForm.value.Name).subscribe(() => {
+      this.router.navigate(['/detail/:name'])
+    })
+    console.log(this.searchForm);
   }
 
 }

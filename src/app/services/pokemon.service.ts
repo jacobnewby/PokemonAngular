@@ -10,7 +10,7 @@ export class PokemonService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemon(id: string) {
+  getPokemon(id) {
     return this.http.get(`${Api_Url}/pokemon/${id}`);
   }
 
