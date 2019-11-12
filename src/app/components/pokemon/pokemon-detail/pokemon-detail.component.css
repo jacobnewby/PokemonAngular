@@ -1,0 +1,21 @@
+/* .detailInfo{
+    margin: 2em;
+} */
+
+/* .detailCard {
+    display: flex;
+    flex-direction: column;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    background-color: blue 0.2;
+}
